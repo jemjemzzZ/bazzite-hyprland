@@ -13,7 +13,17 @@ cp -avf "/ctx/system_files"/. /
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux hyprland xdg-desktop-portal-hyprland waybar foot wl-clipboard
+dnf5 install -y tmux wl-clipboard
+
+dnf5 install -y dnf5-plugins
+
+dnf5 copr enable -y mpapacc/hyprland
+
+dnf5 install -y \
+    hyprland \
+    xdg-desktop-portal-hyprland \
+    waybar \
+    foot
 
 # Use a COPR Example:
 #
