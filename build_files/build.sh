@@ -25,6 +25,15 @@ dnf5 install -y \
     waybar \
     foot
 
+dnf5 copr enable -y errornointernet/quickshell
+
+dnf5 install -y \
+    quickshell \
+    qt6-qtsvg \
+    qt6-qtmultimedia \
+    qt6-qt5compat \
+    qt6-qtimageformats
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
